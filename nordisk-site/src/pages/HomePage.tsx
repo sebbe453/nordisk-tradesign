@@ -4,7 +4,7 @@ import ContactSection from "../components/ContactSection";
 export default function HomePage() {
   return (
     <main className="bg-neutral-950 text-gray-100">
-      <section className="relative overflow-hidden bg-neutral-950 bg-[url('/hero.png')] bg-cover bg-center">
+      <section className="relative overflow-hidden bg-neutral-950 bg-[url('../hero.png')] bg-cover bg-center">
         <div className="relative z-10 mx-auto max-w-6xl px-6 py-28 text-center md:py-36">
           <div className="flex items-center justify-center gap-3 text-emerald-700 font-semibold">
             <span className="h-px w-16 bg-emerald-700" />
@@ -34,7 +34,7 @@ export default function HomePage() {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             <div className="rounded-lg border border-neutral-700 bg-neutral-800 p-6">
               <div className="mb-4 overflow-hidden rounded-md aspect-[4/3] bg-neutral-700">
-                <img src="/features/hallbarhet.jpg" alt="Hållbarhet" className="h-full w-full object-cover" />
+                <img src="Ny mapp/hallbarhet.jpg" alt="Hållbarhet" className="h-full w-full object-cover" />
               </div>
               <div className="text-sm text-emerald-700 font-semibold">Hållbarhet</div>
               <h3 className="mt-2 font-serif text-xl font-semibold text-gray-100">Ansvarsfullt materialval</h3>
@@ -42,7 +42,7 @@ export default function HomePage() {
             </div>
             <div className="rounded-lg border border-neutral-700 bg-neutral-800 p-6">
               <div className="mb-4 overflow-hidden rounded-md aspect-[4/3] bg-neutral-700">
-                <img src="/features/hantverk.jpg" alt="Genuint hantverk" className="h-full w-full object-cover" />
+                <img src="Ny mapp/hantverk.jpg" alt="Genuint hantverk" className="h-full w-full object-cover" />
               </div>
               <div className="text-sm text-emerald-700 font-semibold">Genuint Hantverk</div>
               <h3 className="mt-2 font-serif text-xl font-semibold text-gray-100">Detaljer som består</h3>
@@ -50,7 +50,7 @@ export default function HomePage() {
             </div>
             <div className="rounded-lg border border-neutral-700 bg-neutral-800 p-6">
               <div className="mb-4 overflow-hidden rounded-md aspect-[4/3] bg-neutral-700">
-                <img src="/features/anpassning.jpg" alt="Anpassning" className="h-full w-full object-cover" />
+                <img src="Ny mapp/anpassning.jpg" alt="Anpassning" className="h-full w-full object-cover" />
               </div>
               <div className="text-sm text-emerald-700 font-semibold">Anpassning</div>
               <h3 className="mt-2 font-serif text-xl font-semibold text-gray-100">Formad efter dig</h3>

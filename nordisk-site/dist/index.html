@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nordisk Trädesign</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+      .chatbase-bubble-button { background-color: #047857 !important; color: #ffffff !important; }
+    </style>
+    <script type="module" crossorigin src="/assets/index-3j4hYoZT.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BWrEnW0x.css">
+  </head>
+  <body class="bg-neutral-950">
+    <div id="root"></div>
+    <script>
+      (function(){
+        if(!window.chatbase||window.chatbase("getState")!=="initialized"){
+          window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};
+          window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})
+        }
+        const onLoad=function(){
+          window.embeddedChatbotConfig = {
+            chatbotId: "fyQZeHQ8E1LAf0SZ7mN0r",
+            domain: "www.chatbase.co",
+            theme: {
+              backgroundColor: "#047857",
+              buttonBackgroundColor: "#047857",
+              fontColor: "#ffffff"
+            }
+          };
+          const script=document.createElement("script");
+          script.src="https://www.chatbase.co/embed.min.js";
+          script.id="fyQZeHQ8E1LAf0SZ7mN0r";
+          script.domain="www.chatbase.co";
+          document.body.appendChild(script)
+        };
+        if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}
+      })();
+    </script>
+  </body>
+</html>
