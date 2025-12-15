@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nordisk Trädesign</title>
+    <style>
+      :root { --bg: #ffffff; --text: #1f2937; --muted: #6b7280; --dark: #0f0f0f; --card: #f8fafc; --accent: #b86a2a; --accent-hover: #9c561f; }
+      * { box-sizing: border-box; }
+      body { margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; color: var(--text); background: var(--bg); }
+      header { padding: 20px 24px; display: flex; justify-content: space-between; align-items: center; }
+      header .brand { font-weight: 700; letter-spacing: .02em; }
+      .container { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+      .hero { text-align: center; padding: 80px 0 40px; }
+      .hero .kicker { color: #24533f; letter-spacing: .35em; font-size: 12px; }
+      .hero h1 { margin: 12px 0 12px; font-size: clamp(36px, 7vw, 72px); line-height: 1.05; font-weight: 800; }
+      .hero p { color: var(--muted); font-size: clamp(16px, 2.5vw, 18px); }
+      .about { padding: 40px 0 60px; }
+      .grid { display: grid; gap: 20px; grid-template-columns: repeat(1, 1fr); }
+      .card { background: var(--card); border: 1px solid #e5e7eb; border-radius: 8px; padding: 22px; }
+      .card .num { color: #94a3b8; font-weight: 600; }
+      .card h3 { margin: 6px 0 8px; font-size: 18px; }
+      .contact { background: var(--dark); color: #e5e7eb; padding: 70px 0; }
+      .contact .kicker { color: #d1d5db; letter-spacing: .35em; font-size: 12px; text-align: center; }
+      .contact h2 { text-align: center; margin: 10px 0 30px; font-size: clamp(28px, 5vw, 42px); font-weight: 800; color: #f3f4f6; }
+      form { display: grid; gap: 18px; }
+      label { font-size: 14px; color: #d1d5db; }
+      input, textarea { width: 100%; border-radius: 6px; border: 1px solid #27272a; background: #1f1f21; color: #f3f4f6; padding: 14px 16px; font-size: 16px; }
+      input::placeholder, textarea::placeholder { color: #a1a1aa; }
+      button { background: var(--accent); color: #fff; border: none; border-radius: 6px; padding: 12px 18px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; cursor: pointer; }
+      button:hover { background: var(--accent-hover); }
+      .success { color: #f59e0b; font-size: 14px; }
+      footer { text-align: center; color: var(--muted); padding: 40px 0; }
+      @media (min-width: 720px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+    </style>
+  </head>
+  <body>
+    <header class="container">
+      <div class="brand">Nordisk Trädesign</div>
+    </header>
+
+    <section class="hero container">
+      <div class="kicker">SEDAN 2024</div>
+      <h1>Nordisk Trädesign</h1>
+      <p>Där skandinavisk tradition möter modernt hantverk. Vi skapar tidlösa möbler och inredningar med omsorg om detaljerna.</p>
+    </section>
+
+    <section class="about container">
+      <div class="grid">
+        <div class="card">
+          <div class="num">01</div>
+          <h3>Kvalitet i varje detalj</h3>
+          <p>Vi arbetar med certifierat virke och noggrant utvalda material för att garantera hållbarhet och estetik.</p>
+        </div>
+        <div class="card">
+          <div class="num">02</div>
+          <h3>Tradition & innovation</h3>
+          <p>Våra metoder förenar nordisk tradition med modern teknik för att skapa långlivade lösningar.</p>
+        </div>
+        <div class="card">
+          <div class="num">03</div>
+          <h3>Hållbart skapande</h3>
+          <p>Vi prioriterar miljön och väljer material och processer med minimal påverkan.</p>
+        </div>
+        <div class="card">
+          <div class="num">04</div>
+          <h3>Personligt bemötande</h3>
+          <p>Varje projekt formas efter dina behov. Vi lyssnar, planerar och levererar – tillsammans.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact">
+      <div class="container">
+        <div class="kicker">KONTAKT</div>
+        <h2>Låt oss skapa tillsammans</h2>
+        <form id="contact-form">
+          <div>
+            <label for="name">Namn</label>
+            <input id="name" name="name" type="text" placeholder="Ditt fullständiga namn" />
+          </div>
+          <div>
+            <label for="email">E‑post</label>
+            <input id="email" name="email" type="email" placeholder="din@epost.se" />
+          </div>
+          <div>
+            <label for="message">Din Fråga / Meddelande</label>
+            <textarea id="message" name="message" rows="6" placeholder="Berätta om ditt projekt eller ställ en fråga..."></textarea>
+          </div>
+          <div>
+            <button type="submit">Skicka förfrågan</button>
+          </div>
+          <div id="success" class="success" style="display:none;">Tack! Din förfrågan är skickad.</div>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      © 2024 Nordisk Trädesign. Alla rättigheter förbehållna.
+    </footer>
+
+    <script>
+      const form = document.getElementById('contact-form');
+      const success = document.getElementById('success');
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const name = (document.getElementById('name')).value;
+        const email = (document.getElementById('email')).value;
+        const message = (document.getElementById('message')).value;
+        try {
+          const res = await fetch('https://hook.eu1.make.com/4s3ppu3ws06d88i7ibhd4avxt7658yl8', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name, email, message })
+          });
+          if (res.ok) {
+            success.style.display = 'block';
+            (document.getElementById('name')).value = '';
+            (document.getElementById('email')).value = '';
+            (document.getElementById('message')).value = '';
+            setTimeout(() => { success.style.display = 'none'; }, 5000);
+          }
+        } catch {}
+      });
+    </script>
+  </body>
+</html>
+
