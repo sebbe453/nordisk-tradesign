@@ -1,0 +1,8 @@
+# Mappar att ignorera
+/node_modules
+/dist
+/build
+
+# Loggar
+npm-debug.log*
+yarn-debug.log*
